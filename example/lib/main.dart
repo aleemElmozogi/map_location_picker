@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:map_location_picker/map_location_picker.dart';
 
-import 'key.dart';
-
 void main() {
   runApp(
     const MaterialApp(
@@ -39,7 +37,7 @@ class _MyAppState extends State<MyApp> {
         children: [
           PlacesAutocomplete(
             searchController: _controller,
-            apiKey: YOUR_API_KEY,
+            apiKey: 'AIzaSyD3Fol2RWtjq3NHUhZYtOIPAYKkT9Hw0tg',
             mounted: mounted,
             hideBackButton: true,
             onGetDetailsByPlaceId: (PlacesDetailsResponse? result) {
@@ -122,7 +120,7 @@ class _MyAppState extends State<MyApp> {
                   MaterialPageRoute(
                     builder: (context) {
                       return MapLocationPicker(
-                        apiKey: YOUR_API_KEY,
+                        apiKey: 'AIzaSyD3Fol2RWtjq3NHUhZYtOIPAYKkT9Hw0tg',
                         popOnNextButtonTaped: true,
                         currentLatLng: const LatLng(29.146727, 76.464895),
                         onNext: (GeocodingResult? result) {
